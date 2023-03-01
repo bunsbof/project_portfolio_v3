@@ -62,22 +62,8 @@ export default class Room {
                 child.position.z = 8.83572;
             }
 
-            // if (
-            //     child.name === "Mailbox" ||
-            //     child.name === "Lamp" ||
-            //     child.name === "FloorFirst" ||
-            //     child.name === "FloorSecond" ||
-            //     child.name === "FloorThird" ||
-            //     child.name === "Dirt" ||
-            //     child.name === "Flower1" ||
-            //     child.name === "Flower2"
-            // ) {
-            //     child.scale.set(0, 0, 0);
-            // }
-
             child.scale.set(0, 0, 0);
             if (child.name === "Cube") {
-                // child.scale.set(1, 1, 1);
                 child.position.set(0, -1, 0);
                 child.rotation.y = Math.PI / 4;
             }
@@ -100,10 +86,6 @@ export default class Room {
         this.actualRoom.add(rectLight);
 
         this.roomChildren["rectLight"] = rectLight;
-
-        // const rectLightHelper = new RectAreaLightHelper(rectLight);
-        // rectLight.add(rectLightHelper);
-        // console.log(this.room);
 
         this.scene.add(this.actualRoom);
         this.actualRoom.scale.set(0.11, 0.11, 0.11);
